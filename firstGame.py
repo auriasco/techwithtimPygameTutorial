@@ -2,9 +2,9 @@ import pygame
 import pygame.draw as d
 pygame.init()
 
-def test_ellipse(self):
+def test_ellipse(self,d):
     d.surf = pygame.Surface((320, 200))
-    pygame.draw.ellipse(d.surf, (255, 0, 0), (10, 10, 25, 20))
+    win = d.surf
     x = 50
     y = 50
     width = 40
@@ -15,29 +15,17 @@ def test_ellipse(self):
     while run:
         pygame.time.delay(100)
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
-        
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT]:
-            x -= vel
-        if keys[pygame.K_RIGHT]:
-            x += vel
-        if keys[pygame.K_UP]:
-            y -= vel
-        if keys[pygame.K_DOWN]:
-            y += vel
-        win.fill((0,0,0))
-        
-        test_ellipse()
-
-        
-        pygame.draw.rect(win, (255,0,0),(x,y,width,height))
-        pygame.display.update()
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+    pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
+    
+    #win.fill((0,0,0))
+    
+    pygame.display.update()
 
 win = pygame.display.set_mode((500,500))
-test_ellipse(win)
+test_ellipse(win,d)
 pygame.quit
 #win2 = pygame.display.set_mode((500,500))
 #pygame.display.set_caption("First Game")
