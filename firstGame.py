@@ -7,7 +7,8 @@ def test_ellipse(self):
     pygame.draw.ellipse(d.surf, (255, 0, 0), (10, 10, 25, 20))
 
 win = pygame.display.set_mode((500,500))
-
+test_ellipse(win2)
+#win2 = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
 x = 50
@@ -34,6 +35,8 @@ while run:
     if keys[pygame.K_DOWN]:
         y += vel
     win.fill((0,0,0))
+    
+    test_ellipse()
 
     
     pygame.draw.rect(win, (255,0,0),(x,y,width,height))
