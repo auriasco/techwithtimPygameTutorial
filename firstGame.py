@@ -1,10 +1,10 @@
 import pygame
+import pygame.draw as d
 pygame.init()
 
 def test_ellipse(self):
-    import pygame.draw
-    surf = pygame.Surface((320, 200))
-    pygame.draw.ellipse(surf, (255, 0, 0), (10, 10, 25, 20))
+    d.surf = pygame.Surface((320, 200))
+    pygame.draw.ellipse(d.surf, (255, 0, 0), (10, 10, 25, 20))
 
 win = pygame.display.set_mode((500,500))
 
