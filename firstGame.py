@@ -14,11 +14,13 @@ def test_ellipse(self,d):
     run = True
     while run:
         pygame.time.delay(100)
+        pygame.Surface((320,200))
+        pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
+        pygame.draw.rect(win, (255,0,0),(x,y,width,height))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-    pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
     
     #win.fill((0,0,0))
     
