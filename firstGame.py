@@ -26,12 +26,12 @@ def test_ellipse(self,d):
     
     pygame.display.update()
 
-win = pygame.display.set_mode((500,500))
-test_ellipse(win,d)
-pygame.quit
-#win2 = pygame.display.set_mode((500,500))
-#pygame.display.set_caption("First Game")
-'''
+#win = pygame.display.set_mode((500,500))
+#test_ellipse(win,d)
+#pygame.quit
+win2 = pygame.display.set_mode((500,500))
+pygame.display.set_caption("First Game")
+
 x = 50
 y = 50
 width = 40
@@ -45,7 +45,7 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-    
+    pygame.key.get_focused()
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         x -= vel
@@ -55,12 +55,12 @@ while run:
         y -= vel
     if keys[pygame.K_DOWN]:
         y += vel
-    win.fill((0,0,0))
+    win2.fill((0,0,0))
     
-    test_ellipse()
+    #test_ellipse()
 
     
-    pygame.draw.rect(win, (255,0,0),(x,y,width,height))
+    pygame.draw.rect(win2, (255,0,0),(x,y,width,height))
+    pygame.draw.ellipse(win2,(255,0,0),(x+100,y-100,width,height))
     pygame.display.update()
 pygame.quit
-'''
