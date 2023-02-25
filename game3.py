@@ -3,7 +3,11 @@ import math as m
 import pygame.draw as d
 pygame.init()
 
-def test_ellipse(self,d):
+def create_sprite(self):
+    pygame.draw.circle(self,(255,0,0),(x-20,y+100),20)
+    pygame.draw.rect(self,(255,0,0),(x-45,y+120,50,50))
+
+def test_ellipse(self):
     d.surf = pygame.Surface((320, 200))
     win = d.surf
     x = 50
@@ -62,8 +66,11 @@ while run:
     #test_ellipse()
 
     
-    pygame.draw.rect(win2, (255,0,0),(x,y,width,height))
-    pygame.draw.ellipse(win2,(255,0,0),(x+100,y-100,width,height))
-    pygame.draw.circle(win2,(255,0,0),(x-100,y+100),width)
+    #pygame.draw.rect(win2, (255,0,0),(x,y,width,height))
+    #pygame.draw.ellipse(win2,(255,0,0),(x+100,y-100,width,height))
+    #pygame.draw.circle(win2,(255,0,0),(x-20,y+100),20)
+    #pygame.draw.rect(win2,(255,0,0),(x-45,y+120,50,50))
+    create_sprite(win2)
+    
     pygame.display.update()
 pygame.quit
