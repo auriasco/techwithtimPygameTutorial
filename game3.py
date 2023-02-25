@@ -4,37 +4,14 @@ import pygame.draw as d
 pygame.init()
 
 def create_sprite(self):
-    pygame.draw.circle(self,(255,0,0),(x-20,y+100),20)
-    pygame.draw.rect(self,(255,0,0),(x-45,y+120,50,50))
+    h_width = 20 
+    b_width = 50
+    pygame.draw.circle(self,(255,0,0),(x-20,y+100),h_width)
+    pygame.draw.rect(self,(255,0,0),(x-45,y+120,b_width,b_width+25))
 
-def test_ellipse(self):
-    d.surf = pygame.Surface((320, 200))
-    win = d.surf
-    x = 50
-    y = 50
-    width = 40
-    height = 60
-    vel = 5
 
-    run = True
-    while run:
-        pygame.time.delay(100)
-        pygame.Surface((320,200))
-        pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
-        pygame.draw.rect(win, (255,0,0),(x,y,width,height))
-        #pygame.draw.circle(win,(255,0,0),(30,30,20))
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
 
-    #win.fill((0,0,0))
-    
-    pygame.display.update()
-
-#win = pygame.display.set_mode((500,500))
-#test_ellipse(win,d)
-#pygame.quit
 win2 = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
