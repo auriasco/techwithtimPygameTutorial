@@ -1,4 +1,5 @@
 import pygame
+import math as m
 import pygame.draw as d
 pygame.init()
 
@@ -21,7 +22,7 @@ def test_ellipse(self,d):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-    
+
     #win.fill((0,0,0))
     
     pygame.display.update()
