@@ -18,7 +18,7 @@ def test_ellipse(self,d):
         pygame.Surface((320,200))
         pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
         pygame.draw.rect(win, (255,0,0),(x,y,width,height))
-        pygame.draw.circle(win,(255,0,0),(30,30,20))
+        #pygame.draw.circle(win,(255,0,0),(30,30,20))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -64,5 +64,6 @@ while run:
     
     pygame.draw.rect(win2, (255,0,0),(x,y,width,height))
     pygame.draw.ellipse(win2,(255,0,0),(x+100,y-100,width,height))
+    pygame.draw.circle(win2,(255,0,0),(x-100,y+100),width)
     pygame.display.update()
 pygame.quit
