@@ -71,6 +71,6 @@ while run:
     #pygame.draw.circle(win2,(255,0,0),(x-20,y+100),20)
     #pygame.draw.rect(win2,(255,0,0),(x-45,y+120,50,50))
     create_sprite(win2)
-    
+    #pass window object to function to create sprite
     pygame.display.update()
 pygame.quit
