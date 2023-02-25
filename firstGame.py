@@ -1,35 +1,7 @@
 import pygame
 import math as m
-import pygame.draw as d
 pygame.init()
 
-def test_ellipse(self,d):
-    d.surf = pygame.Surface((320, 200))
-    win = d.surf
-    x = 50
-    y = 50
-    width = 40
-    height = 60
-    vel = 5
-
-    run = True
-    while run:
-        pygame.time.delay(100)
-        pygame.Surface((320,200))
-        pygame.draw.ellipse(win, (255, 0, 0), (10, 10, 25, 20))
-        pygame.draw.rect(win, (255,0,0),(x,y,width,height))
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-
-    #win.fill((0,0,0))
-    
-    pygame.display.update()
-
-#win = pygame.display.set_mode((500,500))
-#test_ellipse(win,d)
-#pygame.quit
 win2 = pygame.display.set_mode((500,500))
 pygame.display.set_caption("First Game")
 
