@@ -16,15 +16,21 @@ def bottom_top(self):
     block_length = 5*scaling_f
     pygame.draw.rect(self,(255,0,0),(0,0,500,50))
     pygame.draw.rect(self,(255,0,0),(0,450,500,50))
-def row(self,n):
+def row1(self,n,i):
     #row_length = r.randint(10,50)
-    pygame.draw.rect(self,(255,0,0),(0,150,n,25))
-    pygame.draw.rect(self,(0,0,255),(n,150,500-n,25))
-       
+    pygame.draw.rect(self,(255,0,0),(0,i,n,25))
+    pygame.draw.rect(self,(0,0,255),(n,i,500-n,25))
+def row2(self,n,i):
+    pygame.draw.rect(self,(255,0,0),(0,i,n,25))
+    pygame.draw.rect(self,(0,0,255),(n,i,n+250,25))   
+    pygame.draw.rect(self,(255,0,0),(n+250,i,500-(n+250),25))
+  
 
 def maze(self):
     bottom_top(self)
-    row(self,100)
+    #row1(self,100,275)
+    #row1(self,100,300)
+    row2(self,10,300)
     
 
 
