@@ -41,7 +41,7 @@ def maze(self):
     for i in range(250,400):
         #row2(self,10,i)
         if(i > 300):
-            row2(self,10,i) #win, col, row
+            row2(self,10,i) #win, starting column, row
         else:
             row2(self,10,i)
 
