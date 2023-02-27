@@ -16,13 +16,13 @@ def bottom_top(self):
     block_length = 5*scaling_f
     pygame.draw.rect(self,(255,0,0),(0,0,500,50))
     pygame.draw.rect(self,(255,0,0),(0,450,500,50))
-def row1(self,n,i):
+def row1(self,n,i): #red blue row
     #row_length = r.randint(10,50)
-    pygame.draw.rect(self,(255,0,0),(0,i,n,25))
+    pygame.draw.rect(self,(255,0,0),(0,i,n,25)) 
     pygame.draw.rect(self,(0,0,255),(n,i,500-n,25))
-def row2(self,n,j):
+def row2(self,n,j): #red blue red row
     pygame.draw.rect(self,(255,0,0),(0,j,n,25))
-    t = 0 # length of blue block, n is the starting position
+    t = 0 # length of blue block, n is the row length 
     if (j > 300 and j < 350):
         t = 500-t
     else:
